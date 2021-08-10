@@ -5,6 +5,7 @@ import SectoinTitle from "../../components/layout/SectionTitle";
 
 const UseState = (props) => {
   const [count, setCount] = useState(1);
+  const [name, setName] = useState("Maro");
 
   return (
     <div className="UseState">
@@ -35,6 +36,8 @@ const UseState = (props) => {
       </div>
 
       <SectoinTitle title="Exercicio 02" />
+      <input type="text" className="input" value= {name} onChange={e => setName(e.target.value)}/>
+      <span className="text">{name}</span>
     </div>
   );
 };
